@@ -9,7 +9,6 @@ html {
 }
 
 body {
-	position: relative;
 	margin: 0;
 	font-family: $main-font, sans-serif;
 	font-weight: 400;
@@ -47,6 +46,9 @@ h4 {
 }
 
 .site-container {
+	margin: 0 auto;
+	max-width: 1440px;
+	position: relative;
 	overflow: hidden;
 }
 
@@ -84,12 +86,6 @@ h4 {
 	margin: 0 auto;
 	padding: 0 15px;
 	max-width: 1156px;
-}
-.container-fluid {
-	max-width: 1470px;
-	margin: 0 auto;
-	padding: 0 15px;
-	position: relative;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

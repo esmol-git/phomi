@@ -126,8 +126,129 @@
 		margin-left: auto;
 	}
 }
+.download {
+	background-color: #cdd2d5;
+	min-height: 705px;
+	position: relative;
+	&__block {
+		width: 514px;
+		background-color: #fff;
+		padding: 105px 70px 105px 150px;
+		z-index: 2;
+		position: absolute;
+		top: 0;
+	}
+	&__form {
+		max-width: 270px;
+		&-title {
+			font-weight: 600;
+			font-size: 32px;
+			line-height: 38px;
+			color: #1d2f39;
+			margin-bottom: 15px;
+		}
+		&-descr {
+			font-size: 12px;
+			line-height: 150%;
+			color: #8c9da7;
+			margin-bottom: 4px;
+		}
+	}
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-image: url(../../img/catalog.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 825px;
+	}
+}
+.form-input {
+	border-bottom: 1px solid #1d2f39;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	input {
+		border: none;
+		outline: none;
+		width: 82%;
+		background-image: url(../../img/convert.png);
+		background-repeat: no-repeat;
+		background-position: left;
+		padding: 10px 20px 10px 30px;
+		&::placeholder {
+			font-size: 12px;
+			line-height: 150%;
+			color: #8c9da7;
+		}
+	}
+}
 .section-one {
 }
 .section-main {
 	display: flex;
+}
+
+.menu__burger {
+	margin-left: 35px;
+	display: none;
+}
+
+@media (max-width: 990px) {
+	.section-title__img.skin {
+		top: -150px;
+	}
+}
+
+@media (max-width: 900px) {
+	.section-info,
+	.section-title {
+		padding-left: 60px;
+	}
+	.section-title--right {
+		padding-top: 130px;
+	}
+	.menu__list {
+		display: none;
+	}
+	.menu__burger {
+		display: block;
+	}
+	.section-info__description {
+		font-size: 12px;
+		margin-bottom: 8px;
+	}
+	.section-info__title {
+		font-size: 20px;
+		max-width: 280px;
+		line-height: 1.1;
+	}
+	.section-title {
+		min-height: 309px;
+	}
+	.section-title__main {
+		font-size: 18px;
+	}
+	.section-title__description {
+		max-width: 100px;
+	}
+	.section-number__square {
+		display: flex;
+		align-items: center;
+		width: 255px;
+		height: 106px;
+	}
+	.section-number__title {
+		margin-right: 14px;
+	}
+	.section-title__img.tree {
+		width: 90%;
+	}
+}
+@media (max-width: 600px) {
+	.section-main {
+		flex-direction: column;
+	}
 }
