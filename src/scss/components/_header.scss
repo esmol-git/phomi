@@ -1,91 +1,120 @@
 .header {
-  position: absolute;
-  left: 0;
-  top: 50px;
-  width: 100%;
-  background-color: rgb(141, 140, 140);
+	position: absolute;
+	left: 0;
+	top: 50px;
+	width: 100%;
+	z-index: 100;
 
-  // .header__container
+	// .header__container
 
-  &__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 
-  // .header__logo
+	// .header__logo
 
-  &__logo {
-    display: flex;
-    align-items: center;
+	&__logo {
+		display: flex;
+		align-items: center;
 
-    span {
-      margin-left: 27px;
-      font-size: 12px;
-      line-height: 14px;
-      color: #1d2f39;
-      opacity: 0.3;
-    }
-  }
+		span {
+			margin-left: 27px;
+			font-size: 12px;
+			line-height: 14px;
+			color: #1d2f39;
+			opacity: 0.3;
+		}
+	}
 
-  // .header__logo-img
+	// .header__logo-img
 
-  &__logo-img {}
+	&__logo-img {
+	}
 
-  // .header__menu
+	// .header__menu
 
-  &__menu {
-    display: flex;
-  }
+	&__menu {
+		display: flex;
+	}
 
-  // .header__call
+	// .header__call
 
-  &__call {
-    display: flex;
-    flex-direction: column;
-    margin-left: 74px;
-  }
+	&__call {
+		display: flex;
+		flex-direction: column;
+		margin-left: 74px;
+	}
 
-  // .header__call-number
+	// .header__call-number
 
-  &__call-number {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    color: #fff;
-  }
+	&__call-number {
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 17px;
+		color: #fff;
+	}
 
-  // .header__call-link
+	// .header__call-link
 
-  &__call-link {
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 14px;
-    text-decoration: underline;
-    color: #FFFFFF;
-  }
+	&__call-link {
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 14px;
+		text-decoration: underline;
+		color: #ffffff;
+	}
 }
 
 .menu {
+	// .menu__list
 
-  // .menu__list
+	&__list {
+		display: flex;
+	}
 
-  &__list {
-    display: flex;
+	// .menu__item
 
-  }
+	&__item {
+		margin-left: 48px;
+	}
 
-  // .menu__item
+	// .menu__link
 
-  &__item {
-    margin-left: 48px;
-  }
-
-  // .menu__link
-
-  &__link {
-    font-size: 12px;
-    line-height: 32px;
-    color: #fff;
-  }
+	&__link {
+		padding-bottom: 7px;
+		font-size: 12px;
+		line-height: 32px;
+		color: #fff;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 3px;
+			background-color: #fff;
+			opacity: 0;
+			transition: all 0.2s ease;
+		}
+		&:hover::after {
+			opacity: 1;
+		}
+	}
+	&__link--active {
+		cursor: default;
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 3px;
+			background-color: #fff;
+			opacity: 1;
+			transition: all 0.2s ease;
+		}
+	}
 }

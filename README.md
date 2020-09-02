@@ -1,2 +1,2 @@
-# gulp-maxgraph
-My gulp settings
+# PHOMI
+Верстка многостраничного сайта

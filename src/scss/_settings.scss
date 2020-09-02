@@ -1,80 +1,97 @@
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body {
-  position: relative;
-  margin: 0;
-  font-family: $main-font, sans-serif;
-  font-weight: 400;
-  background-color: var(--color-white);
+	position: relative;
+	margin: 0;
+	font-family: $main-font, sans-serif;
+	font-weight: 400;
+	background-color: #cecece;
 }
 
 img {
-  max-width: 100%;
+	display: block;
+	max-width: 100%;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
-
+p {
+	margin: 0;
+	padding: 0;
+}
+h1,
+h2,
+h3,
+h4 {
+	margin: 0;
+	padding: 0;
+}
 .is-outer {
-  position: relative !important; // stylelint-disable-line declaration-no-important
-  left: -9999px !important; // stylelint-disable-line declaration-no-important
+	position: relative !important; // stylelint-disable-line declaration-no-important
+	left: -9999px !important; // stylelint-disable-line declaration-no-important
 }
 
 .site-container {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .stop-scroll {
-  @include stop-scroll;
+	@include stop-scroll;
 }
 
 .is-hidden {
-  display: none !important; // stylelint-disable-line declaration-no-important
+	display: none !important; // stylelint-disable-line declaration-no-important
 }
 
 .for-mobile {
-  display: none;
+	display: none;
 
-  @include mobile {
-    display: block;
-  }
+	@include mobile {
+		display: block;
+	}
 }
 
 .error {
-  border: 2px #ff4019 solid !important; // stylelint-disable-line declaration-no-important
+	border: 2px #ff4019 solid !important; // stylelint-disable-line declaration-no-important
 }
 
 .visually-hidden {
-  @include visually-hidden;
+	@include visually-hidden;
 }
 
 .btn-reset {
-  border: none;
-  background: transparent;
-  cursor: pointer;
+	border: none;
+	background: transparent;
+	cursor: pointer;
 }
 
 .container {
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1156px;
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1156px;
+}
+.container-fluid {
+	max-width: 1470px;
+	margin: 0 auto;
+	padding: 0 15px;
+	position: relative;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
-  outline: none;
+	outline: none;
 }
